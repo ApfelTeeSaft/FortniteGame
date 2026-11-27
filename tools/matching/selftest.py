@@ -1036,6 +1036,42 @@ def test_engine_lines() -> None:
     print("engine lines: ok")
 
 
+def test_engine_layout() -> None:
+    """tools/engine/layout.py: line patches replace one line for one and refuse a line that
+    changed; include roots and their ancestors map into the mirror; a mirrored file without
+    patches is the original byte for byte (no #line: it would reorder MSVC's static data)."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "engine"))
+    import layout as L
+    assert L.line_hash("\tvirtual void F();  ") == L.line_hash("virtual void F();")
+    saved = L.PATCHES
+    try:
+        L.PATCHES = {"Runtime/A/Public/X/Y.h": {2: (L.line_hash("virtual void F();"), "")},
+                     "Runtime/B/Classes/Z.h": {1: (L.line_hash("x"), "y")},
+                     "Runtime/A/Private/C.cpp": {1: (L.line_hash("x"), "y")}}
+        assert L.patch_text("Runtime/A/Public/X/Y.h", "a\r\n\tvirtual void F();\r\nb") == "a\r\n\r\nb"
+        try:
+            L.patch_text("Runtime/A/Public/X/Y.h", "a\nvirtual void G();\nb")
+            raise AssertionError("a changed line was patched")
+        except SystemExit:
+            pass
+        assert L.roots() == ["Runtime/A/Public", "Runtime/B/Classes"]
+        assert L.mirrored_root("Runtime\\A\\Public") == "Runtime/A/Public"
+        assert L.mirrored_root("Runtime\\A\\Private") is None
+        assert L.holds_mirrored_root("Runtime") and L.holds_mirrored_root(".")
+        assert not L.holds_mirrored_root("Developer") and not L.holds_mirrored_root("Runtime\\A\\Public")
+        assert L.mirror_path("Runtime\\A\\Public") == L.MIRROR / "Runtime" / "A" / "Public"
+        assert L.replacement(["\tvirtual void F();", "x"], 1, L.DEVIRTUALIZE) == "\tvoid F();"
+        assert L.replacement(["a;", "  b;"], 1, (2, "c;")) == "b; c;"
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            f = Path(tmp) / "Y.h"
+            f.write_bytes(b"\xef\xbb\xbf#pragma once\r\nint a;\r\n")
+            assert L.mirrored_file(f) == f.read_bytes()       # not patched: copied as it is
+    finally:
+        L.PATCHES = saved
+    print("engine layout: ok")
+
+
 def test_data_section_blocks() -> None:
     """resolve_data_symbol: blocks of DATA_SECTION_MIN+ bytes are also searched in .data."""
     from types import SimpleNamespace as NS
@@ -1062,6 +1098,7 @@ def main() -> int:
     test_locate()
     test_engine_map()
     test_engine_lines()
+    test_engine_layout()
     test_known_pointers()
     test_native_array_runs()
     test_slot_elimination()

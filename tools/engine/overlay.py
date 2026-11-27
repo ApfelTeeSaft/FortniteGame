@@ -14,6 +14,10 @@ copy of a .cpp, placed under FortniteGameCode/Build/Engine/, with
   paths, so they find what they found before (the original directory is also passed with /I
   for headers that rely on the include stack).
 
+An overlay also carries the line patches of tools/engine/layout.py (whole lines replaced one
+for one, where Fortnite's engine declares a class differently); a patched file with no
+renumbering is overlaid with its own numbers and name.
+
 The directives change only numbering and the presumed file name, not the code. A directive is
 placed only where it cannot fall inside a macro's arguments, a comment, a string or a
 continued line, and in the same preprocessor region as the line it renumbers. The engine
@@ -28,6 +32,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import layout  # noqa: E402
 import ue_target as T  # noqa: E402
 
 BUILD_ROOT = "D:\\Build\\++FN25\\Sync"
@@ -229,7 +234,7 @@ def overlay_unit(unit: Path, out_root: Path, module: str, numbering) -> tuple[Pa
         if how is None:
             return None
         first, inserts, name = how
-        text = read_source(src)
+        text = layout.patch_text(layout.engine_rel(src), read_source(src))
         dst = out_root / "src" / src.relative_to(T.ROOT)
         data = overlay_text(src, text, first, inserts, name)
         dst.parent.mkdir(parents=True, exist_ok=True)
@@ -271,7 +276,8 @@ def load_lines() -> dict[str, list[tuple[int, int]]]:
 
 def final_numbering(lines: dict[str, list[tuple[int, int]]]):
     """numbering() for build.py: the recovered original line numbers, for the files whose
-    numbers differ; the others are compiled as they are."""
+    numbers differ, and the files tools/engine/layout.py patches with their own numbers; the
+    others are compiled as they are."""
     cache: dict = {}
 
     def numbering(index: int, src: Path):
@@ -282,5 +288,7 @@ def final_numbering(lines: dict[str, list[tuple[int, int]]]):
                 first, inserts, _ = plan(lines[rel], read_source(src))
                 if first != 1 or inserts:
                     cache[rel] = (first, inserts, original_file(src))
+            if cache[rel] is None and layout.engine_rel(src) in layout.PATCHES:
+                cache[rel] = (1, [], original_file(src))
         return cache[rel]
     return numbering

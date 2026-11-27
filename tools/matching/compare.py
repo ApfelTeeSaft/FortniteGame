@@ -50,6 +50,10 @@ ELIMINATION_LIMIT = 4096
 POOLED_MIN, POOLED_DOMINANCE = 10, 10   # pooled __real@ constants among several scalar-loaded copies
 TLS_RVA: int | None = None   # the reference's .tls section; SECREL fields are offsets into it (set in main)
 HELD_SLOTS = True   # section-relative: never predict a .bss/.data slot another symbol is observed at
+# Diagnostics only (FN_SR_LOG=<path>): every field whose section-relative neighbours disagree,
+# with both sides' predictions and which one the reference holds, for offline rule studies.
+SR_LOG_PATH = __import__("os").environ.get("FN_SR_LOG")
+SR_LOG: dict = {}
 FOLD_LIMIT = 16   # longest relocation-free leaf body treated as ICF-folded (bytes)
 # Manifest categories placed in bulk by their masked bytes (tools/engine/map.py): they observe
 # only when exact, and never as ICF-folded bodies (their objects bring many tiny leaf bodies
@@ -123,6 +127,7 @@ class Resolver:
         self.entry_ranges: dict[int, tuple[int, int]] = {}   # reference RVA range per entry
         self.blocks: dict[str, dict] = {}
         self._name_index = None
+        self.sr_info: dict = {}            # FN_SR_LOG: the last disagreement seen per field
         # ICF: (section name, body) of a relocation-free COMDAT function -> {address: entries}.
         self.folded_obs: dict = {}
         self._code_groups: dict = {}
@@ -305,6 +310,23 @@ class Resolver:
         # The sides disagree. A side whose neighbour is the symbol's rigid partner, directly
         # next to it in the layout, decides (rigid_successor).
         (_, lpred, ldesc), (_, rpred, rdesc) = nearest
+        if SR_LOG_PATH:
+            def side_run(step, first):
+                count, j = 0, i + step
+                while 0 <= j < len(items):
+                    n = observed_pred(j)
+                    if n is not None:
+                        if n[1] != first:
+                            break
+                        count += 1
+                    j += step
+                return count
+            self.sr_info[(objpath, symbol, exclude)] = {
+                "section": obj.sections[sym.section - 1].name,
+                "left": {"pred": lpred, "run": side_run(-1, lpred), "items": i - nearest_at[0],
+                         "bytes": mine - items[nearest_at[0]][0], "taken": bool(taken(lpred))},
+                "right": {"pred": rpred, "run": side_run(1, rpred), "items": nearest_at[1] - i,
+                          "bytes": items[nearest_at[1]][0] - mine, "taken": bool(taken(rpred))}}
         if taken(lpred) != taken(rpred):
             pred, desc = (rpred, rdesc) if taken(lpred) else (lpred, ldesc)
             return [(pred, "section-relative (local) to " + desc + "; the other side's slot holds another symbol")]
@@ -314,6 +336,22 @@ class Resolver:
             return [(lpred, "section-relative (rigid pair) to " + ldesc + " (the other side disagrees)")]
         if nearest_at[1] == i + 1 and rigid_successor(symbol, items[i + 1][1]):
             return [(rpred, "section-relative (rigid pair) to " + rdesc + " (the other side disagrees)")]
+        # A vtable's own slots are direct evidence: where its exact functions' pointers are,
+        # together and nowhere else, the vtable is, whatever the neighbours vote. The first slot
+        # need not be among them here (the neighbours already disagree, so a layout difference
+        # is near); a slot of a class whose virtuals moved fails the byte comparison instead.
+        # On the logged disagreements this decided 1,469 vtable fields, 1,460 of them right, and
+        # none that the run rule below got right. Where the slots fit several places, a side
+        # whose prediction is one of them, the other side's not, decides (388 right, 23 wrong,
+        # again none against the run rule).
+        places: list = []
+        direct = self._known_pointers(obj, symbol, exclude, need_first=False, places=places)
+        if direct:
+            return direct
+        fit = [(p, d) for p, d in ((lpred, ldesc), (rpred, rdesc)) if p in places]
+        if len(fit) == 1:
+            return [(fit[0][0], "section-relative (local) to " + fit[0][1]
+                     + f"; the vtable's own slots fit there, not where the other side predicts")]
         # The sides disagree: a gap next to the symbol. Each side's run is the observed
         # neighbours that agree with its nearest one, up to the first that does not. The
         # strictly longer run's prediction is used; that side holds more of the symbol's own
@@ -331,7 +369,18 @@ class Resolver:
             runs.append((count, first, desc))
         (lc, lp, ld), (rc, rp, rd) = runs
         if lc == rc:
-            return self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
+            hit = self._known_pointers(obj, symbol, exclude) or self._slot_elimination(symbol, exclude)
+            if hit:
+                return hit
+            # Equal runs, nothing else: the side whose nearest observed neighbour has fewer
+            # layout items between it and the symbol, then fewer bytes. Fewer items in between
+            # leave fewer places for a member the reference lacks or has more of.
+            for ldist, rdist in ((i - nearest_at[0], nearest_at[1] - i),
+                                 (mine - items[nearest_at[0]][0], items[nearest_at[1]][0] - mine)):
+                if ldist != rdist:
+                    pred, desc = (lp, ld) if ldist < rdist else (rp, rd)
+                    return [(pred, "section-relative (nearer side, equal runs) to " + desc)]
+            return []
         count, pred, desc = max(runs)
         extra = f" and {count - 1} more neighbours" if count > 1 else ""
         return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
@@ -607,12 +656,14 @@ class Resolver:
             self._pointers = index
         return self._pointers
 
-    def _known_pointers(self, obj: CoffObject, symbol: str, exclude: int | None) -> list[tuple[int, str]]:
+    def _known_pointers(self, obj: CoffObject, symbol: str, exclude: int | None,
+                        need_first: bool = True, places: list | None = None) -> list[tuple[int, str]]:
         """A data symbol holding pointers to functions whose addresses are known (a vtable whose
         slots are exact matches), its first slot among them: the one 8-aligned place in the
         reference's read-only data where every such pointer is, at its offset. A slot pointing
         into the entry under test is not used. Tried only where nothing else resolves the
-        symbol; the byte comparison checks the prediction."""
+        symbol; the byte comparison checks the prediction. need_first=False (where the
+        section-relative neighbours disagree) drops the first-slot condition."""
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
             return []
@@ -636,7 +687,7 @@ class Resolver:
         # The first slot must be among them: it pins the start. Without it, slots of a class whose
         # virtuals differ (Fortnite's UObject has one virtual fewer, and its vtables lie back to
         # back without RTTI) match one slot off.
-        if not slots or min(s[0] for s in slots) != 0:
+        if not slots or (need_first and min(s[0] for s in slots) != 0):
             return []
         index = self._pointer_index()
         first = min(slots, key=lambda s: len(index.get(s[1], ())))
@@ -645,8 +696,16 @@ class Resolver:
             base = at - first[0]
             if all(self.dimg.read(base + off, 8) == val.to_bytes(8, "little") for off, val, _ in slots):
                 cands.append(base)
+        if places is not None:
+            places.extend(cands)
         if len(cands) != 1:
             return []
+        if not need_first:
+            # A pick between disagreeing neighbours, like the run rule: a miss is missing
+            # evidence (an unresolved field), not a contradiction.
+            return [(cands[0], f"section-relative (the vtable's own slots; the neighbours disagree): "
+                               f"{len(slots)} slot(s) of exact functions ({slots[0][2][:60]}) are there "
+                               f"and nowhere else together")]
         return [(cands[0], f"known pointers: {len(slots)} slot(s) of exact functions "
                            f"({slots[0][2][:60]}) are there and nowhere else together")]
 
@@ -1166,7 +1225,20 @@ def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: R
         if label is not None:
             targets = [(start + label, f"label at offset {label:#x} of this function")]
         else:
+            if SR_LOG_PATH:
+                resolver.sr_info.clear()
             targets = resolver.resolve(obj, objpath, r.symbol, exclude) if size else []
+        info = resolver.sr_info.pop((objpath, r.symbol, exclude), None) if SR_LOG_PATH and size and ref is not None else None
+        if info is not None:
+            addend0 = int.from_bytes(cand[r.offset:r.offset + size], "little", signed=size == 4)
+
+            def holds(t):
+                v = _field_value(r.kind, t, addend0, start, r.offset, image_base)
+                return v is not None and (v & ((1 << (8 * size)) - 1)).to_bytes(size, "little") == ref[r.offset:r.offset + size]
+            SR_LOG[(objpath, r.symbol, exclude, r.offset)] = dict(
+                info, symbol=r.symbol, object=objpath, entry=exclude, offset=r.offset,
+                truth="left" if holds(info["left"]["pred"]) else "right" if holds(info["right"]["pred"]) else "neither",
+                chosen=targets[0][1] if targets else "")
         if not targets:
             unresolved.append((r.offset, size or 4, r.symbol, r.kind))
             continue
@@ -1567,6 +1639,10 @@ def main() -> int:
             obs.append({"object": objpath, "symbol": sym,
                         "at": {f"0x{a:08X}": sorted(entries[i]["name"] for i in ents) for a, ents in sorted(d.items())}})
         Path(args.dump_observations).write_text(json.dumps({"observations": obs}, indent=0), encoding="utf-8")
+    if SR_LOG_PATH:
+        for v in SR_LOG.values():
+            v["entry"] = entries[v["entry"]].get("start_rva") if v["entry"] is not None else None
+        Path(SR_LOG_PATH).write_text(json.dumps(list(SR_LOG.values()), indent=0), encoding="utf-8")
 
     stale = []
     for i, res in results.items():

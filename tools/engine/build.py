@@ -14,7 +14,11 @@ The force-included wrappers that carry the definitions are copied with the proje
 definitions (ue_target.PROJECT_DEFINITIONS) applied. An engine .cpp whose line numbers differ
 in the reference is compiled through an overlay (tools/engine/overlay.py): a local copy whose
 #line directives give its lines the original numbers of analysis/engine-lines.json, under its
-own file name (--plain: every file as it is). A build record per module
+own file name, and the headers tools/engine/layout.py patches, where Fortnite's classes are
+laid out differently, through its mirror of their include root: the response file's /I of
+the root (and of its ancestors, searched first) and the wrappers' includes name the mirror,
+and /showIncludes checks that no original file of the root is opened (--plain: every file as
+it is). A build record per module
 (FortniteGameCode/Build/Engine/<Module>.build.json) lists each action's object, the sources it
 includes and any errors. Usage:
 
@@ -37,6 +41,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "matching"))
+import layout  # noqa: E402
 import msvc  # noqa: E402
 import ue_target as T  # noqa: E402
 
@@ -46,6 +51,7 @@ WRAPPERS = T.BUILD_DIR / "wrappers"
 OVERLAY_ROOT = T.BUILD_DIR / "overlay"
 DROP = ("/Yu", "/Fp", "/Fo", "/Yc")
 DROP_EXACT = {"/Z7", "/Zo"}
+INCLUDING = "Note: including file:"
 
 _ENV = None
 
@@ -82,12 +88,17 @@ def cl_path(env: dict) -> str:
     return exe
 
 
-def wrapper_copy(path: Path, overrides: dict) -> Path:
+def wrapper_copy(path: Path, overrides: dict, mirrored: bool = False) -> Path:
     """A force-included wrapper header with the project's definitions applied. Its own
-    includes are absolute, so the copy works from anywhere."""
+    includes are absolute, so the copy works from anywhere; with mirrored, those in a root
+    tools/engine/layout.py mirrors name the mirror's copy."""
     src = path.read_text(encoding="utf-8", errors="replace")
     for k, v in overrides.items():
         src, n = re.subn(rf"^#define {re.escape(k)} .*$", f"#define {k} {v}", src, flags=re.M)
+    if mirrored:
+        def mirror(m):
+            return f'{m.group(1)}"{layout.mirror_path(m.group(2))}"' if layout.mirrored_root(m.group(2)) else m.group(0)
+        src = re.sub(r'^(\s*#\s*include\s*)"([^"]+)"', mirror, src, flags=re.M)
     rel = path.relative_to(T.INTERMEDIATE)
     out = WRAPPERS / rel
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -96,17 +107,33 @@ def wrapper_copy(path: Path, overrides: dict) -> Path:
     return out
 
 
-def rewrite(response: Path, obj: Path, overrides: dict, tag: str, transform=None) -> tuple[Path, Path, list[Path]]:
-    """(our response file, the action's source, overlay files) from UBT's response file.
-    transform(source) -> (source to compile, directories to search last, files it wrote)."""
+def rewrite(response: Path, obj: Path, overrides: dict, tag: str, transform=None,
+            mirrors: bool = False) -> tuple[Path, Path, list[Path], bool]:
+    """(our response file, the action's source, overlay and wrapper files, whether it uses a
+    mirrored include root) from UBT's response file. transform(source) -> (source to
+    compile, directories to search last, files it wrote). With mirrors, the include roots
+    tools/engine/layout.py patches are searched in its mirror instead."""
     lines = response.read_text(encoding="utf-8", errors="replace").splitlines()
-    out, source, extra, written = [], None, [], []
+    out, source, extra, written, wrappers = [], None, [], [], []
+    mirrored = False
+    if mirrors:
+        layout.prepare()
     for line in lines:
         s = line.strip()
         if not s or s in DROP_EXACT or s.startswith(DROP):
             continue
+        if mirrors and s.startswith("/I"):
+            d = s[2:].strip().strip('"')
+            if layout.mirrored_root(d):              # the root: searched in the mirror only
+                out.append(f'/I "{layout.mirror_path(d)}"')
+                mirrored = True
+                continue
+            if layout.holds_mirrored_root(d):        # an ancestor ("CoreUObject/Public/..."): mirror first
+                out.append(f'/I "{layout.mirror_path(d)}"')
+                mirrored = True
         if s.startswith("/FI"):
-            out.append(f'/FI"{wrapper_copy(Path(s[3:].strip(chr(34))), overrides)}"')
+            wrappers.append(wrapper_copy(Path(s[3:].strip(chr(34))), overrides, mirrors))
+            out.append(f'/FI"{wrappers[-1]}"')
             continue
         if s.startswith('"') and not s.startswith('"/'):
             source = Path(s.strip('"'))
@@ -115,6 +142,8 @@ def rewrite(response: Path, obj: Path, overrides: dict, tag: str, transform=None
                 s = f'"{compiled}"'
         out.append(s)
     out += [f'/I "{d}"' for d in extra]
+    if mirrored:
+        out.append("/showIncludes")
     out.append(f'/Fo"{obj}"')
     rsp_dir = T.BUILD_DIR / "rsp" / tag if tag else T.BUILD_DIR / "rsp"
     rsp = rsp_dir / response.parent.name / response.name
@@ -122,7 +151,7 @@ def rewrite(response: Path, obj: Path, overrides: dict, tag: str, transform=None
     text = "\n".join(out) + "\n"
     if not rsp.exists() or rsp.read_text(encoding="utf-8") != text:   # unchanged: keep its time stamp
         rsp.write_text(text, encoding="utf-8")
-    return rsp, source, written
+    return rsp, source, written + wrappers, mirrored
 
 
 def action_source(response: Path) -> Path:
@@ -144,7 +173,8 @@ def included_sources(unit: Path) -> list[str]:
 def compile_action(response: Path, overrides: dict, env: dict, obj_root: Path = ENGINE_OBJ, tag: str = "",
                    numbering=None, overlay_root: Path | None = None) -> dict:
     """Compile one action. With numbering, its engine .cpp files are compiled through overlays
-    (tools/engine/overlay.py) written under overlay_root; tag keeps response files apart."""
+    (tools/engine/overlay.py) written under overlay_root, and the headers tools/engine/layout.py
+    patches through its mirror; tag keeps response files apart."""
     module = response.parent.name
     unit_name = response.name[:-len(".cpp.obj.response")]
     obj = obj_root / module / f"{unit_name}.obj"
@@ -153,7 +183,9 @@ def compile_action(response: Path, overrides: dict, env: dict, obj_root: Path = 
     if numbering is not None:
         import overlay
         transform = lambda src: overlay.overlay_unit(src, overlay_root, module, numbering)  # noqa: E731
-    rsp, source, written = rewrite(response, obj, overrides, tag, transform)
+    rsp, source, written, mirrored = rewrite(response, obj, overrides, tag, transform, mirrors=numbering is not None)
+    if mirrored:
+        written = written + [layout.stamp()]
     try:
         objrel = str(obj.relative_to(OBJ_ROOT)).replace("\\", "/")
     except ValueError:
@@ -169,9 +201,13 @@ def compile_action(response: Path, overrides: dict, env: dict, obj_root: Path = 
         return rec
     r = subprocess.run([cl_path(env), f"@{rsp}"], env=env, cwd=T.ENGINE_SOURCE, capture_output=True,
                        text=True, errors="replace")
-    rec["ok"] = r.returncode == 0
-    if r.returncode:
-        rec["errors"] = "\n".join([l for l in r.stdout.splitlines() if "error" in l][:8])
+    out = [l for l in r.stdout.splitlines() if not l.startswith(INCLUDING)]
+    originals = sorted({l[len(INCLUDING):].strip() for l in r.stdout.splitlines() if l.startswith(INCLUDING)
+                        and layout.mirrored_root(l[len(INCLUDING):].strip())})
+    rec["ok"] = r.returncode == 0 and not originals
+    if not rec["ok"]:
+        rec["errors"] = "\n".join([l for l in out if "error" in l][:8] +
+                                  [f"original header of a mirrored root: {p}" for p in originals[:8]])
         if obj.exists():
             obj.unlink()
     return rec

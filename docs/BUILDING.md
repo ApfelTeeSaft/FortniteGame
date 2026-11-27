@@ -113,12 +113,27 @@ python tools/engine/lines.py measure --all   # needs the plain or current object
 python tools/engine/lines.py derive          # write analysis/engine-lines.json
 ```
 
+Where Fortnite's engine declares a class differently (`docs/ENGINE_DIFFERENCES.md` #14, #16–#18),
+`tools/engine/layout.py` replaces whole lines of the engine files, one line for one so that line
+numbers stay. Patched headers are compiled from a mirror of their include root
+(`FortniteGameCode/Build/Engine/overlay/include/`, every file of the root, so that MSVC's
+includer-directory lookups cannot reach the original); the response files' `/I` of the root
+(and of its ancestors, searched first) and the wrappers' includes name the mirror, and
+`/showIncludes` fails a unit that still opens an original file of a mirrored root. Patched
+`.cpp` files compile through overlays. Each patch names its original line by a hash, so a
+changed engine tree stops the build instead of being patched elsewhere:
+
+```
+python tools/engine/layout.py                # check every patch against the local engine tree
+```
+
 - `ue_target.py export` pins UBT to the reference's toolchain in
   `Engine/Saved/UnrealBuildTool/BuildConfiguration.xml` (VS2015 v140, SDK 10.0.10586.0) and
   runs it with `-JsonExport -SkipBuild`. UBT then builds and runs UnrealHeaderTool and writes,
   per module, the unity files and the compiler response files it would use
   (`Engine/Intermediate/Build/Win64/UE4/Shipping/<Module>/`).
-- `build.py` runs those actions with three changes that do not alter code: objects go to
+- `build.py` runs those actions with three changes that do not alter code (besides the
+  overlays and layout patches above; `--plain` drops both): objects go to
   `FortniteGameCode/Build/ClientShipping/obj/Engine/<Module>/`, no precompiled header (the
   wrapper header is still force-included) and no debug information. The wrappers carry the
   definitions; the project's (`ue_target.PROJECT_DEFINITIONS`: logging in shipping) are applied

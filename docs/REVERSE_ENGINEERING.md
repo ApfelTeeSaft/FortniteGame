@@ -116,9 +116,13 @@ same import, and the manifest records which.
     observed neighbours nearest the symbol that agree with each other gives a prediction.
     The prediction is used if the two sides agree, or if only one side has observed
     neighbours. A layout gap elsewhere in a large unit therefore cannot outvote the
-    symbol's immediate neighbours. If the two sides disagree (a gap next to the symbol),
-    each side's run of agreeing observed neighbours is counted, and the strictly longer run
-    decides; equal runs resolve nothing. In `.bss` and `.data` a slot that other entries
+    symbol's immediate neighbours. If the two sides disagree (a gap next to the symbol), a
+    vtable goes where its exact slot functions' pointers are together and nowhere else (its
+    first slot need not be among them). Otherwise each side's run of agreeing observed
+    neighbours is counted, and the strictly longer run decides. Equal runs go to the vtable
+    and slot-elimination rules, then to the side whose nearest observed neighbour has fewer
+    layout items between it and the symbol, then fewer bytes (2026-11-27, "Engine class
+    layouts"). In `.bss` and `.data` a slot that other entries
     observe holding another symbol is never predicted, since writable data is not folded. A
     side whose prediction lands there is dropped and the other side decides. If both sides
     land on such slots, nothing is resolved. A prediction that then fails to reproduce the
@@ -1011,6 +1015,130 @@ inference now ties two neighbours to two.
 placements map.py makes now that the engine's 14,855 exact functions are known targets (16,497
 ambiguous functions decided by relocations instead of 14,602), and the name choice. Engine
 manifests: 24,814 entries, 15,169 exact, 9,413 relocation-equivalent, 232 partial.
+
+## Engine class layouts (`tools/engine/layout.py`, 2026-11-27)
+
+Fortnite's engine is an internal snapshot from before UE4.20's release, and some of its classes
+declare other virtual functions than public 4.20.0. A virtual call compiles to a vtable
+displacement, so every function that calls a moved virtual differs in that displacement. This
+pass measures where the reference's vtables differ and models the differences in the build.
+
+**Measuring.** A vtable of ours is placed in the reference where the most of its exact slots'
+pointers sit, at the same offsets. For the `UObject` family the first slots are shared by
+hundreds of classes, so the choice between equally voted places is made by the class's own
+slots: the place where most of them hold a reference function with the same masked bytes,
+within three slots. Each slot is then aligned by body similarity (same length, 90 % of the bytes
+equal outside relocation fields), and the steps in the offset between ours and the reference's
+are read off. Short bodies (`ret`, `xor al, al`) say nothing on their own. Their order is
+compared as a sequence instead, against all of a class's reference vtables (overrides tell
+the slots apart), and against callers whose slots are known. Some return paths in the image
+are obfuscated (`lea rsp, [rsp+8]; jmp [rsp-8]` for `ret`; `push rbp; lea rbp, [rip+X];
+xchg [rsp], rbp; ret` for a jump) and are followed through.
+
+**UObject.** Every pair of exact slots on one side of public offset `0xA0` keeps its distance
+in the reference; every pair across it is 8 bytes closer. The slot at `0xA0` is
+`Serialize(FStructuredArchive::FRecord)`: MSVC places overloads together, in reverse order. UHT
+overrides it in 324 generated classes; `IAssetRegistry` declares it too, and the reference's
+`UAssetRegistryImpl` has one `Serialize` thunk where ours has two (ENGINE_DIFFERENCES #14). The
+overload and UHT's overrides are made non-virtual, not removed; only the interface's pure
+virtual goes (see "Data order" below).
+
+**Derived classes.** The UObject fix made 951 functions exact and cost 16. The 5 that lost
+their placement call virtuals of classes that have one more virtual than public 4.20: the two
+differences had cancelled. Those classes were measured the same way (ENGINE_DIFFERENCES
+#16–#18):
+- `UActorComponent::OnRep_IsActive` is not virtual (its exec thunk jumps to it directly);
+- `AActor::RewindForReplay` is not virtual;
+- `AController` declares `InitNavigationControl` and `UpdateNavigationComponents` after
+  `FailedToSpawnPawn`;
+- `UPathFollowingComponent` has the path-following agent callbacks as its own virtuals and no
+  virtual `OnNewPawn`;
+- `ANavigationData` has `ProjectPoint` as its own virtual, and `CalcPathLength` before
+  `CalcPathCost`;
+- `UEngine` has two more virtuals after `ShouldThrottleCPUUsage` and three fewer later;
+- `UMovieSceneTrack` has one more after `SupportsMultipleRows`.
+A virtual the reference lacks becomes non-virtual, so its callers still compile. A slot the
+reference has, where public 4.20 has none or declares the function in a 4.20 interface,
+gets a placeholder virtual (`FNLayout_*`) with the slot's trivial body. Placeholders take no
+name from the reference: none survives.
+
+**Patches.** `layout.py` replaces whole lines, one for one, so `__LINE__` and the line overlays
+are unaffected. Each original line is named by a hash of its text; a replacement is literal
+text, the line without its first `virtual`, or other original lines joined (a declaration
+moved). The engine's own text therefore stays in the local tree. Headers are compiled from a
+mirror of their whole include root: MSVC looks up a quote include in the including file's
+physical directory and the directories of the files that included it, before the `/I` paths. A
+copied header ahead on the `/I` path would still find its neighbours in the original tree.
+The response files' `/I` of the root, and of its ancestors (generated code includes
+`CoreUObject/Public/...` through `/I Runtime`), name the mirror. `/showIncludes` fails any unit
+that still opens an original file of a mirrored root. Measured with MSVC 19.00:
+- `#line 1 "<file>"` above `#pragma once` makes the compiler include the file a second time.
+- A `#line` naming another file anywhere in a header changes the order in which the compiler
+  allocates static data and literals in the whole unit, for definitions in `.cpp` files too
+  (`EditorLayoutsSectionName`, `LayoutService.cpp`, moved to the front of `Slate`'s `.data`).
+  The mirrored copies therefore carry none; their `__FILE__` is the mirror's path, which only
+  `PURE_VIRTUAL`-style stubs pass on.
+- Mirroring a root without changing its files leaves every object as it was.
+- Lambda and anonymous-namespace names follow the translation unit, not the header's path.
+
+**Data order.** MSVC's order of a unit's statics, literals and vtables also depends on the
+declarations it compiles. Deleting UHT's `Serialize(FRecord)` overrides moved
+`FMediaAssetsModule`'s vtables in `MediaAssets` from before the `MEDIA` literal (where the
+reference has them, as the plain build does) to after `LogMediaAssets`, and put an empty literal
+in front of `FCopyTexture2DCS`'s vtable. Neighbours then placed those vtables wrongly. Keeping
+the declarations and dropping only `virtual` leaves those units' order as the plain build's
+while the vtables lose the slot, so the overload is modelled that way.
+
+**Section-relative rules.** Where a data symbol's two sides of observed neighbours disagree,
+`compare.py` now tries the symbol's own evidence before the run vote. A vtable goes where its
+exact slot functions' pointers are together and nowhere else, without requiring its first
+slot. Where they fit several places, a side whose prediction is one of them, and the other
+side's not, decides. Equal runs that the strict rules leave open go to the side whose nearest
+observed neighbour has fewer layout items between, then fewer bytes. Each was scored on every
+logged disagreement first (`FN_SR_LOG=<path>`: the fields with both predictions and the side
+the reference holds):
+
+| Rule | Decided | Right | Wrong where the run vote was right |
+| --- | --- | --- | --- |
+| vtable's own slots, one place | 1,469 | 1,460 | 0 |
+| vtable's own slots fit one side | 411 | 388 | 0 |
+| nearer side, equal runs left open | what nothing else decides | | 0 by construction |
+
+Letting the nearer side override the run vote in general would have cost 6 to 39 exact
+functions in the same estimate, so it does not. A miss of the first two is reported as an
+unresolved field, like any layout prediction.
+
+**Not modelled.** The measurements also found differences that need more than a slot:
+- `FArchive` has the interface from before structured archives (ENGINE_DIFFERENCES #19): 44
+  virtuals and 0x88 bytes, so every derived archive's members are 8 bytes off.
+- `UPathFollowingComponent`'s members are 0xE0 bytes later, and it has one interface vtable
+  fewer.
+- `FConsoleVariable*` hold their data at `0x68` where ours is at `0x38`, and the `ECVF_SetBy*`
+  values differ.
+- `FTextFormatter::Format` allocates `0x210` bytes for a history where ours allocates `0x160`.
+
+**Results.** 53,986 exact (52,409 before). 1,610 functions became exact: 909 newly placed and
+701 that were relocation-equivalent, 1,576 of them engine functions. On the way:
+- the `UObject` patch alone (deleting the overload) gave 951 and cost 16. 5 had lost their
+  placement to the derived classes' cancelling differences, which are now modelled;
+- `#line` in the mirror and the deleted declarations had moved data in other units (above).
+  Without either, 1,201 became exact and 10 regressed;
+- the section-relative rules then recovered all but one.
+
+One function is relocation-equivalent that was exact:
+`TGraphTask<EURCMacro_FUpdateLightShaftOverrideDirectionCommand>::ExecuteTask` (`0x01F0EDF0`).
+Its task vtable's right-hand neighbours (2 items away) predict the reference's address. The
+left run of 5 agreeing neighbours, 20 items away, predicts 0x160 bytes too far and wins the
+vote. Between them lie `UDecalComponent`'s, `ULightComponentBase`'s, `ULightComponent`'s and
+`UDirectionalLightComponent`'s vtables, whose `USceneComponent` family is not modelled yet. A
+`LightComponent.h` `__FILE__` literal is there too, 0x40 bytes longer under the mirror's path
+(the reference's `D:\Build\++FN25\Sync` form lies in between). At HEAD the left prediction was
+just as far off; the oversized `UObject` vtables split that run, and the right side won.
+
+A nearer side ten times closer than the other would decide this case, but that threshold is
+only where the estimate stops losing exact functions, so it is not used. Over all logged
+disagreements the nearer side is right in all 73 cases where it is 16 or more times closer.
+Engine manifests: 26,032 entries, 16,745 exact, 9,056 relocation-equivalent, 231 partial.
 
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
