@@ -9,11 +9,11 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **54,299 / 157,719** primary `.pdata` functions (34.43 %, 6,752,504 bytes):
+| Exact functions | **54,405 / 157,719** primary `.pdata` functions (34.49 %, 6,767,700 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 188 hand-reconstructed functions matching the decrypted image;
 - 53 generated GameplayAbilities attribute getters (`tools/codegen/attribute_getters.py`);
-- 17,058 engine functions compiled from the local UE4.20 tree (`tools/engine/`;
+- 17,163 engine functions compiled from the local UE4.20 tree (`tools/engine/`;
   `docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction", "Engine line numbers" and
   "Engine class layouts");
 - 36,992 generated UHT functions:
@@ -26,9 +26,9 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
   - UENUMs: 1,088 `Z_Construct_UEnum_*`, 1,016 `<Enum>_StaticEnum` and 1,087 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 224 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,216 `StaticClass` thunks, 3,174 `AutoInitialize` initializers, 212 leaf exec thunks, 208 native accessors, 182 vector-constant initializers, `FCommandLine::IsInitialized`, 50 hand-written leaves without `.pdata` (Kismet math, Core date, colour and string helpers, `FmodReportError`) and 41 dynamic initializers of the Kismet and UnrealMath units |
-| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 64,372 reconstructed and compiled; 54,299 exact; 10,073 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
-| Relocation-equivalent | 9,834 in the denominator, mostly:
-- 9,142 engine functions (`tools/engine/`): each still has a field no independent evidence resolves;
+| Pipeline stages | Tracked apart (`python tools/progress/generate.py`, `pipeline`): 157,719 identified; 64,545 reconstructed and compiled; 54,405 exact; 10,140 needing investigation, queued by cause in `analysis/match-queue.json` (`tools/matching/match_queue.py`). `tools/matching/regressions.py` reports exact matches lost against `HEAD` |
+| Relocation-equivalent | 9,901 in the denominator, mostly:
+- 9,210 engine functions (`tools/engine/`): each still has a field no independent evidence resolves;
 - 487 `GetPrivateStaticClass` bodies, 453 of them waiting only on `InternalConstructor<C>`;
 - 25 registrars and `StaticStruct`s waiting on string-literal copies;
 - statics next to items not modelled yet.
@@ -70,14 +70,20 @@ Work follows `CLAUDE.md`'s adaptive workflow:
 - `tools/matching/regressions.py` gates each commit.
 
 Largest queue groups (2026-11-24):
-- Engine (bulk, `tools/engine/`): 9,142 relocation-equivalent engine functions; 32,701 compiled
+- Engine (bulk, `tools/engine/`): 9,210 relocation-equivalent engine functions; 32,701 compiled
   functions match several reference functions and 93,543 none (per-module symbol counts). Systematic
   fixes next (`docs/REVERSE_ENGINEERING.md`, "Bulk engine reconstruction"): the internal fork's
   remaining class layouts. Modelled ("Engine class layouts"): the vtables of `UObject`,
-  `IAssetRegistry`, `FArchive` (with its members) and eight derived classes. Measured but not
-  modelled: `UPathFollowingComponent`'s members (0xE0 later), `FConsoleVariable*` data, `FText`
-  histories, `IFileManager`'s vtable and Slate's `FArguments`. Four functions are
-  relocation-equivalent or unplaced that were exact before the class layouts: the light-shaft
+  `IAssetRegistry`, `FArchive` (with its members), eight derived classes, `FMaterial`,
+  `FReferenceCollector`, `UAnimInstance` and `FUniqueNetId`. Measured but not modelled:
+  `FDynamicRHI`'s vtable (15 slots fewer; the D3D11/D3D12 overrides are in `Private` headers,
+  which the mirror cannot replace), `FVertexFactoryType` (32 bytes larger), `UMaterialInterface`'s
+  vtable, the shader classes' members (`0x50` earlier in post-process shaders), `AActor`'s and
+  `UPrimitiveComponent`'s members, `UPathFollowingComponent`'s members (0xE0 later),
+  `FConsoleVariable*` data, `FText` histories, `IFileManager`'s vtable and Slate's `FArguments`
+  (`python tools/engine/nearmiss.py --survey` ranks them). Eight functions are
+  relocation-equivalent or unplaced that were exact before the class layouts: the four of
+  `GPUSort.cpp` (statics next to newly placed `FVertexFactoryType` objects), the light-shaft
   task, `FWidget3DHitTester`'s constructor and the sky-light task (each a vtable only neighbours
   place, now across corrected classes), and `FLargeMemoryWriter::GetArchiveName` (another
   class's folded getter, equal to ours only while `FArchive` was too large; the class itself is
@@ -117,6 +123,13 @@ Largest queue groups (2026-11-24):
   registration objects and header statics, in MSVC's own order.
 - 22 units hold several `TClassCompiledInDefer` runs while their literals interleave. These
   are single objects whose data comes in batches; that is not modelled.
+
+Done (2026-11-28):
+- Interfaces outside `UObject` (`tools/engine/layout.py`; ENGINE_DIFFERENCES #20–#25): the
+  vtables of `FMaterial` (4 virtuals fewer), `FReferenceCollector` (one more), `UAnimInstance`
+  (2 fewer) and `FUniqueNetId` (`GetType` not virtual), found with
+  `tools/engine/nearmiss.py --survey`. 110 more exact, 4 regressed (`GPUSort.cpp`, above);
+  `FDynamicRHI` and `FVertexFactoryType` measured.
 
 Done (2026-11-27):
 - Engine class layouts (`tools/engine/layout.py`): line patches in a mirrored header tree model

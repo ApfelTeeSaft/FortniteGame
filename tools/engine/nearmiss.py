@@ -11,9 +11,15 @@ first differing instruction is classified:
 - register: same mnemonic, different registers (register allocation);
 - mnemonic: different instructions.
 
+With --survey, every module (or the one named) is scanned for near misses whose instructions
+align and differ only in memory displacements, and the changes are counted by (ours ->
+reference) displacement, virtual calls apart from member accesses: where a class layout
+differs, and how many functions it costs.
+
 Diagnostics only; nothing is written to the manifests. Usage:
 
     python tools/engine/nearmiss.py Core [--min 0.9] [--show 20]
+    python tools/engine/nearmiss.py --survey [--min 0.85] [--show 25]
 """
 from __future__ import annotations
 
@@ -65,12 +71,82 @@ def first_difference(data: bytes, mask: bytearray, ref: bytes) -> tuple[str, str
     return "register", sa, sb
 
 
+MEMORY_OPERAND = re.compile(r"\[([a-z0-9]+)(?: \+ [a-z0-9]+\*\d)? ([+-]) (0x[0-9a-f]+)\]")
+
+
+def displacements(code: bytes) -> list[tuple[int, str, str, int]]:
+    """(offset, mnemonic, base register, displacement) of every non-RIP memory operand."""
+    out = []
+    for ins in MD.disasm(code, 0):
+        for m in MEMORY_OPERAND.finditer(ins.op_str):
+            if m.group(1) != "rip":
+                out.append((ins.address, ins.mnemonic, m.group(1), int(m.group(3), 16) * (1 if m.group(2) == "+" else -1)))
+    return out
+
+
+def survey(modules: list[str], minimum: float, show: int) -> int:
+    """Across modules: near misses whose instructions align and differ only in memory
+    displacements, counted by (ours -> reference) displacement. A virtual call's change names
+    a vtable slot that moved; a member access's, a member that moved."""
+    from compare import load_decrypted
+    from pe import PEImage
+    img = PEImage()
+    ix = M.load_index(img, load_decrypted(img))
+    calls, members, seen = Counter(), Counter(), set()
+    examples: dict[tuple, list[str]] = {}
+    for module in modules:
+        path = T.BUILD_DIR / f"{module}.build.json"
+        if not path.exists():
+            continue
+        n = 0
+        for u in json.loads(path.read_text(encoding="utf-8"))["units"]:
+            if not u["ok"]:
+                continue
+            obj = CoffObject(B.OBJ_ROOT / u["object"])
+            for sym, _ in obj.functions():
+                if sym.name in seen:
+                    continue
+                seen.add(sym.name)
+                data, mask = masked(obj, sym.name)
+                if len(data) < 24 or ix.find(data, mask):
+                    continue
+                best, best_s = None, 0.0
+                for start, ref in ix.by_len.get(len(data), []):
+                    s = similarity(data, mask, ref)
+                    if s > best_s:
+                        best, best_s = ref, s
+                if best is None or best_s < minimum:
+                    continue
+                ours, theirs = displacements(bytes(data)), displacements(best)
+                if len(ours) != len(theirs):
+                    continue
+                diffs = [(x[1], x[3], y[3]) for x, y in zip(ours, theirs) if x[:3] == y[:3] and x[3] != y[3]]
+                n += bool(diffs)
+                for mnemonic, a_, b_ in diffs:
+                    key = (a_, b_)
+                    (calls if mnemonic in ("call", "jmp") else members)[key] += 1
+                    examples.setdefault((mnemonic in ("call", "jmp"), key), []).append(sym.name)
+        print(f"{module}: {n} functions differing in displacements only", flush=True)
+    for title, counter, is_call in (("virtual calls", calls, True), ("member accesses", members, False)):
+        print(f"\n{title} (ours -> reference):")
+        for (a_, b_), c in counter.most_common(show):
+            print(f"  {c:5d} {a_:#x} -> {b_:#x}  e.g. {examples[(is_call, (a_, b_))][0][:80]}")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("module")
+    ap.add_argument("module", nargs="?")
     ap.add_argument("--min", type=float, default=0.9)
     ap.add_argument("--show", type=int, default=20)
+    ap.add_argument("--survey", action="store_true",
+                    help="all modules (or the one named): displacement-only near misses by displacement")
     a = ap.parse_args()
+    if a.survey:
+        mods = [a.module] if a.module else sorted(p.name[:-len(".build.json")] for p in T.BUILD_DIR.glob("*.build.json"))
+        return survey(mods, a.min, a.show)
+    if not a.module:
+        ap.error("a module, or --survey")
     from compare import load_decrypted
     from pe import PEImage
     img = PEImage()

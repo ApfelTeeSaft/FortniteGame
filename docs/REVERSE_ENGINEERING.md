@@ -1197,6 +1197,70 @@ that were relocation-equivalent. 3 regressed:
 The light-shaft task above is still relocation-equivalent. Engine manifests: 26,433 entries,
 17,058 exact, 9,142 relocation-equivalent, 233 partial.
 
+### Third batch: interfaces outside `UObject` (2026-11-28)
+
+**Finding them.** `tools/engine/nearmiss.py --survey` takes, for every unplaced function of 24
+bytes or more, the most similar same-length reference function (85 % or more of its bytes
+outside relocations), keeps the pairs whose instructions align and differ only in memory
+displacements, and counts the changes by (ours → reference) displacement. A changed virtual
+call is a vtable slot that moved, a changed member access a member that moved. Over all
+modules the largest groups were virtual calls: `0x1C0 → 0x1A8` (323 call sites, 320 in the
+Renderer), `0x38 → 0x40` (118), `0x140 → 0x128` (90), `0xB8 → 0xA8` (76), `0x2C8 → 0x2B8`
+(59), several RHI slots (`0x110 → 0xF0`, `0x428 → 0x3E8`, `0x488 → 0x448`, `0x540 → 0x4F0`)
+and `0x20 → 0x18` (23). Member accesses point at `AActor`'s members (0x10 earlier from
+our `0x2A0` on) and `UPrimitiveComponent`'s (0x58 later from `0x244`, its subclasses' 0x100
+later), which are larger work and left for later.
+
+**Aligning a vtable whose slots are not placed.** Earlier batches pinned a reference vtable
+by its exact slots. For interfaces whose implementations are unplaced, three more kinds of
+evidence were used (scratch tools, described here so they can be redone):
+- the reference address of the vtable, read from the relocation field of a placed function
+  that stores it;
+- the bodies themselves where they are short leaves without `.pdata`: `FMaterialResource`'s
+  getters read `UMaterial`'s bitfields, and the bit each reads names the getter;
+- a global alignment (Needleman–Wunsch over slots, scored by placed addresses and
+  instruction similarity), checked where bodies are alike by the slot each wrapper calls:
+  every `FDynamicRHI::*_RenderThread` wrapper calls one RHI virtual, and that slot, mapped
+  through the alignment of the earlier slots, identifies it.
+
+**Modelled** (ENGINE_DIFFERENCES #20–#23, `tools/engine/layout.py`, with a new replacement form
+that also drops `final`, `override` and `= 0`):
+- `FMaterial`: no `ShouldWriteOnlyAlpha`, `ShouldDoContactShadows`, `IsUsedWithGeometryCache`
+  or `SetupExtaCompilationSettings` (99 slots, ours 103);
+- `FReferenceCollector`: a no-op virtual after `MarkWeakObjectReferenceForClearing`;
+- `UAnimInstance`: `CanRunParallelWork` and `GetLODLevel` not virtual;
+- `FUniqueNetId`: `GetType` not virtual. Our `FUniqueNetIdWrapper::ToString`, with `IsValid`
+  and `ToString` one slot earlier, equals the reference's `0x00327580`.
+
+**Measured, not modelled.** `FDynamicRHI` (#24): the reference's D3D11 vtable has 202 slots,
+ours 217; the 15 absent virtuals are 4.20 additions (GPU fences, staging buffers, pipeline
+binary libraries, multi-GPU masks, index-buffer UAVs, timer calibration) and five
+`_RenderThread` wrappers. The D3D11 and D3D12 overrides are declared in `Private` headers,
+which a unit includes from the directory of the `.cpp` that includes them, so the include-root
+mirror cannot replace them; that needs overlays of every `.cpp` that includes them. Also
+`UMaterialInterface` (two slots fewer before `0x3E8`).
+
+**Results.** 54,405 exact (54,299 before). 110 functions became exact: 100 newly placed and
+10 that were relocation-equivalent. Of the surveyed callers of the moved slots, 46 of 519
+`FMaterial` callers became exact (mostly `ShouldCompilePermutation`s), 24 of 64
+`FReferenceCollector` callers, 3 of 16 `FUniqueNetId` callers and none of 56 `UAnimInstance`
+callers. Most callers stay unplaced: the survey run again
+on the Renderer shows what else they differ in, chiefly member offsets of the shader classes
+(`0x1BC → 0x16C` in 225 accesses; `FShader`'s own constructor and destructor already match, so
+it lies in a derived class or a member struct) and `FDynamicRHI`'s slots.
+
+4 regressed, all in `Module.Engine.16_of_38` (`GPUSort.cpp`). The fixed slots made the GPU-skin
+vertex factories' `ShouldCompilePermutation` exact and placed their `StaticType` initializers,
+whose objects are new `.bss` neighbours of `RunGPUSortTestWithDebug`'s statics. They predict an
+address 24 bytes off, and the fewer-items rule takes their side. The reason is another layout
+difference: the reference's `FVertexFactoryType` objects are `0x1D0` apart, ours `0x1B0`. Its
+constructor (`0x015B8700`) zeroes 28 bytes after `ReferencedUniformBufferStructsCache` where
+ours stores the one `bool bCachedUniformBufferStructDeclarations` (ENGINE_DIFFERENCES #25).
+With the statics, `RunGPUSortTestWithDebug` and its caller `TestGPUSort_RenderThread` are
+relocation-equivalent, and so are `FRadixSortUpsweepCS`'s constructor (its vtable field has
+no neighbour prediction left) and `ConstructCompiledInstance`, which calls it. Engine
+manifests: 26,606 entries, 17,163 exact, 9,210 relocation-equivalent, 233 partial.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is

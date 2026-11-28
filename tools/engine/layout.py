@@ -36,6 +36,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import re
 import sys
 import threading
 from pathlib import Path
@@ -63,6 +64,11 @@ HEADER_SUFFIXES = {".h", ".inl", ".hpp"}
 MIRROR_FORMAT = 2          # what a mirrored file holds besides its patches (2: nothing)
 
 DEVIRTUALIZE = "-virtual"
+# The original line made a plain member function: its first `virtual` (any whitespace after it)
+# and every `final` and `override` specifier removed, and a pure specifier `= 0` dropped. For
+# declarations DEVIRTUALIZE cannot rewrite: a tab after `virtual`, `final override`, `= 0`, or an
+# override written without `virtual`.
+NONVIRTUAL = "-nonvirtual"
 
 # path relative to Engine/Source -> {line: (hash of the original stripped line, replacement)}
 PATCHES: dict[str, dict[int, tuple[str, object]]] = {
@@ -215,6 +221,47 @@ PATCHES: dict[str, dict[int, tuple[str, object]]] = {
     "Runtime/MovieScene/Public/MovieSceneTrack.h": {
         247: ("da39a3ee5e6b", "virtual bool FNLayout_AfterSupportsMultipleRows() const { return false; }"),
     },
+
+    # Interfaces that are not UObjects (ENGINE_DIFFERENCES #20-#23).
+
+    # FMaterial: the reference's FMaterialResource vtable (0x03618798) has 99 slots, ours 103. Its
+    # slots read UMaterial's usage bitfields, which identify them: the flag word lacks
+    # bWriteOnlyAlpha and bUsedWithGeometryCache, the bEnableResponsiveAA word lacks
+    # bContactShadows, and with them the getters ShouldWriteOnlyAlpha, ShouldDoContactShadows and
+    # IsUsedWithGeometryCache go (ShouldEnableResponsiveAA follows ShouldDisableDepthTest,
+    # GetTessellationMode follows IsUsedWithUI). CompilePropertyAndSetMaterialProperty (or eax,-1)
+    # is followed by GatherCustomOutputExpressions: no SetupExtaCompilationSettings.
+    "Runtime/Engine/Public/MaterialShared.h": {
+        1177: ("787c405e5496", NONVIRTUAL),                        # ShouldWriteOnlyAlpha
+        1180: ("243f1d9b417b", DEVIRTUALIZE),                      # ShouldDoContactShadows
+        1203: ("8c01899d4ddf", DEVIRTUALIZE),                      # IsUsedWithGeometryCache
+        1419: ("27811fa9ec04", DEVIRTUALIZE),                      # SetupExtaCompilationSettings
+        1874: ("c20647232f47", DEVIRTUALIZE),                      # FMaterialResource overrides
+        1877: ("76577b11040c", DEVIRTUALIZE),
+        1899: ("57ebcf7cbe7d", DEVIRTUALIZE),
+    },
+    "Runtime/Landscape/Private/LandscapeRender.cpp": {
+        3510: ("5a1375e101c1", NONVIRTUAL),                        # FLandscapeMaterialResource's
+    },
+    # FReferenceCollector: one more virtual, a no-op (ret), between
+    # MarkWeakObjectReferenceForClearing and HandleObjectReference, in the base vtable
+    # (0x034E3F50) and FReplaceObjectRefCollector's (0x034A49E0) alike.
+    "Runtime/CoreUObject/Public/UObject/UObjectGlobals.h": {
+        1727: ("3a720b4e07eb", (1727, "virtual void FNLayout_AfterMarkWeakObjectReferenceForClearing() {}")),
+    },
+    # UAnimInstance: no virtual CanRunParallelWork (the reference's slot after SnapshotPose is
+    # OnMontageInstanceStopped's tail jump to ClearMontageInstanceReferences) and no virtual
+    # GetLODLevel (PreUpdateAnimation, which sets bNeedsUpdate, follows DisplayDebugInstance).
+    # GetProxyOnGameThread's CreateAnimInstanceProxy call is at 0x2B8, ours 0x2C8.
+    "Runtime/Engine/Classes/Animation/AnimInstance.h": {
+        485: ("56d21a7ee138", DEVIRTUALIZE),
+        1030: ("68ef0be20605", DEVIRTUALIZE),
+    },
+    # FUniqueNetId has no virtual GetType: IsValid is at 0x18 and ToString at 0x20.
+    # FUniqueNetIdWrapper::ToString with those slots is the reference's 0x00327580 (masked bytes).
+    "Runtime/CoreUObject/Public/UObject/CoreOnline.h": {
+        147: ("633b48938360", DEVIRTUALIZE),
+    },
 }
 
 
@@ -244,6 +291,14 @@ def replacement(original: list[str], n: int, new) -> str:
         if "virtual " not in line:
             raise SystemExit(f"layout patch line {n} has no virtual to remove")
         return line.replace("virtual ", "", 1).replace(" override", "", 1)   # nothing to override
+    if new == NONVIRTUAL:
+        line = original[n - 1].rstrip("\r")
+        out = re.sub(r"\bvirtual\s+", "", line, count=1)
+        out = re.sub(r"\s*\b(?:final|override)\b", "", out)
+        out = re.sub(r"\)(\s*(?:const\s*)?)=\s*0\s*;", r")\1;", out, count=1)
+        if out == line:
+            raise SystemExit(f"layout patch line {n} has nothing to make non-virtual")
+        return out
     if isinstance(new, tuple):
         return " ".join(original[x - 1].strip() if isinstance(x, int) else x for x in new)
     return new
