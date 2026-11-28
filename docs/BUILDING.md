@@ -116,8 +116,10 @@ python tools/engine/lines.py derive          # write analysis/engine-lines.json
 Where Fortnite's engine declares a class differently (`docs/ENGINE_DIFFERENCES.md` #14, #16–#18),
 `tools/engine/layout.py` replaces whole lines of the engine files, one line for one so that line
 numbers stay. Patched headers are compiled from a mirror of their include root
-(`FortniteGameCode/Build/Engine/overlay/include/`, every file of the root, so that MSVC's
-includer-directory lookups cannot reach the original); the response files' `/I` of the root
+(`local-output/mirro/`, every file of the root, so that MSVC's includer-directory lookups cannot
+reach the original). The mirror's path is as long as the reference's
+`D:\Build\++FN25\Sync\Engine\Source`, so mirrored headers' `__FILE__` literals have the
+reference's size. The response files' `/I` of the root
 (and of its ancestors, searched first) and the wrappers' includes name the mirror, and
 `/showIncludes` fails a unit that still opens an original file of a mirrored root. Patched
 `.cpp` files compile through overlays. Each patch names its original line by a hash, so a

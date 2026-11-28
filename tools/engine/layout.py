@@ -10,7 +10,7 @@ a declaration: the text comes from the local tree too). Every entry records its 
 (docs/ENGINE_DIFFERENCES.md has the measurements).
 
 Headers are patched through a mirror. Every file of an include root that holds a patched
-header is copied to FortniteGameCode/Build/Engine/overlay/include/<root>, and the response
+header is copied to the mirror (MIRROR, below: local-output/, as long as the reference's root), and the response
 file's /I of the root and the force-included wrappers' absolute includes point at the copy.
 The whole root is copied because MSVC looks up a quote include in the including file's
 physical directory and those of the files that included it before the /I paths: a single
@@ -43,7 +43,22 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ue_target as T  # noqa: E402
 
-MIRROR = T.BUILD_DIR / "overlay" / "include"
+REFERENCE_SOURCE_ROOT = r"D:\Build\++FN25\Sync\Engine\Source"
+
+
+def _mirror_dir() -> Path:
+    """Where the mirror lives: a directory whose absolute path is exactly as long as the
+    reference's Engine/Source root, so that a mirrored header's __FILE__ (the root, then the
+    path below it) has the reference's length and its literal the reference's size. Under the
+    ignored local-output/ when that fits, else in the build directory (lengths then differ)."""
+    base = T.ROOT / "local-output"
+    n = len(REFERENCE_SOURCE_ROOT) - len(str(base)) - 1
+    if n >= 1:
+        return base / ("mirror" + "_" * max(0, n - 6))[:n]
+    return T.BUILD_DIR / "overlay" / "include"
+
+
+MIRROR = _mirror_dir()
 HEADER_SUFFIXES = {".h", ".inl", ".hpp"}
 MIRROR_FORMAT = 2          # what a mirrored file holds besides its patches (2: nothing)
 
@@ -76,6 +91,55 @@ PATCHES: dict[str, dict[int, tuple[str, object]]] = {
         350: ("4595bc70f16c", ""),
     },
 
+    # FArchive has the interface from before structured archives (ENGINE_DIFFERENCES #19). The
+    # 50 reference vtables derived from it end after 44 slots, ours after 57: no IsProxyOf
+    # (Precache follows DetachBulkData), an empty function where GetCacheableArchive is, after
+    # ResetCustomVersions one that sets its bool& to false and returns true (UE3's
+    # IsCloseComplete), virtual IsFilterEditorOnly and IsSaveGame (their bodies test bits 23 and
+    # 24 of the flags), and no Push/PopSerializedProperty, Reset or the 12 Set* setters. Its
+    # members end 8 bytes earlier: FArchive::FArchive (0x011D0DA0) stores every member ours
+    # stores except SerializedPropertyChain, at 0x80.
+    "Runtime/Core/Public/Serialization/Archive.h": {
+        681: ("ea345fd103a1", DEVIRTUALIZE),                       # IsProxyOf
+        895: ("b5dde4eea16f", DEVIRTUALIZE),                       # GetCacheableArchive
+        899: ("da39a3ee5e6b", "\tvirtual void FNLayout_AfterGetArchetypeFromLoader() {}"),
+        1074: ("da39a3ee5e6b", "\tvirtual bool FNLayout_IsCloseComplete(bool& bHasError) { bHasError = false; return true; }"),
+        1122: ("3e04ff877320", ("virtual", 1122)),                 # IsFilterEditorOnly
+        1142: ("334e9e568a83", ("virtual", 1142)),                 # IsSaveGame
+        1239: ("1a02973ec602", "\t\treturn nullptr;"),            # GetSerializedPropertyChain: no chain
+        1253: ("99c0456eebad", DEVIRTUALIZE),                      # PushSerializedProperty
+        1261: ("8460e2d0d499", DEVIRTUALIZE),                      # PopSerializedProperty
+        1290: ("531dad3515eb", DEVIRTUALIZE),                      # Reset
+        1468: ("05eb072e90cf", DEVIRTUALIZE), 1475: ("787026ff5949", DEVIRTUALIZE),
+        1482: ("7607c84712e9", DEVIRTUALIZE), 1489: ("d0984275ed4c", DEVIRTUALIZE),
+        1496: ("f597214c10e6", DEVIRTUALIZE), 1504: ("ed5b0eb9e634", DEVIRTUALIZE),
+        1511: ("be07f80f8056", DEVIRTUALIZE), 1519: ("e71899f77ccb", DEVIRTUALIZE),
+        1527: ("6149853d85b8", DEVIRTUALIZE), 1535: ("f33c32e1143c", DEVIRTUALIZE),
+        1540: ("c1d1028fc0de", DEVIRTUALIZE), 1545: ("08d12960f55f", DEVIRTUALIZE),
+        1646: ("d8d4c49a6d59", ""),                                # SerializedPropertyChain
+    },
+    "Runtime/Core/Public/Serialization/ArchiveProxy.h": {
+        241: ("df0a6ee7578a", DEVIRTUALIZE), 246: ("1fd0232db145", DEVIRTUALIZE),
+        258: ("a216a65d8c7b", DEVIRTUALIZE), 263: ("5a9389eeb338", DEVIRTUALIZE),
+    },
+    "Runtime/Core/Public/Serialization/ArchiveFromStructuredArchive.h": {
+        33: ("5a9389eeb338", DEVIRTUALIZE),
+    },
+    "Runtime/Core/Public/Serialization/BitWriter.h": {
+        160: ("89d3f28e8eb2", "\tvoid Reset();"),               # overrode FArchive::Reset
+    },
+    # The chain's uses: a local null chain in the four functions that keep it (their chain
+    # branches become dead), nothing elsewhere.
+    "Runtime/Core/Private/Serialization/Archive.cpp": {
+        40: ("ac1d64ca1443", ""), 60: ("ac1d64ca1443", ""), 61: ("33018eb129b0", ""),
+        85: ("33018eb129b0", ""), 115: ("6afb71a8cdda", ""), 168: ("6afb71a8cdda", ""),
+        169: ("ac1d64ca1443", ""),
+        241: ("60ba4b2daa4e", "{ const FArchiveSerializedPropertyChain* SerializedPropertyChain = nullptr;"),
+        255: ("60ba4b2daa4e", "{ FArchiveSerializedPropertyChain* SerializedPropertyChain = nullptr;"),
+        285: ("60ba4b2daa4e", "{ FArchiveSerializedPropertyChain* SerializedPropertyChain = nullptr;"),
+        301: ("60ba4b2daa4e", "{ FArchiveSerializedPropertyChain* SerializedPropertyChain = nullptr;"),
+    },
+
     # Classes derived from UObject whose own virtuals differ (ENGINE_DIFFERENCES #16-#18). Each was
     # aligned slot by slot against reference vtables of the class, by the bodies the slots hold.
     # A virtual the reference lacks is made non-virtual (its callers still compile); a slot the
@@ -83,6 +147,16 @@ PATCHES: dict[str, dict[int, tuple[str, object]]] = {
     # name is known it is a placeholder, FNLayout_*, with the body the reference's slot holds
     # when that body is trivial.
 
+    # USceneComponent::UpdateBounds is not virtual: the reference's slots after CalcBounds hold
+    # CalcBoundingCylinder (it squares the bounds' extents), ShouldCollideWhenPlacing
+    # (return false, overridden by 13 of 95 scene-component vtables) and UpdatePhysicsVolume.
+    # UPrimitiveComponent's override goes with it: its own virtuals are all one slot earlier.
+    "Runtime/Engine/Classes/Components/SceneComponent.h": {
+        1059: ("d3d4f87e4fb0", DEVIRTUALIZE),
+    },
+    "Runtime/Engine/Classes/Components/PrimitiveComponent.h": {
+        807: ("33bb4619d110", DEVIRTUALIZE),
+    },
     # UActorComponent::OnRep_IsActive is not virtual: the reference's execOnRep_IsActive
     # (0x023C9B90) jumps to it directly, and Activate is the class's first slot.
     "Runtime/Engine/Classes/Components/ActorComponent.h": {
@@ -169,7 +243,7 @@ def replacement(original: list[str], n: int, new) -> str:
         line = original[n - 1].rstrip("\r")
         if "virtual " not in line:
             raise SystemExit(f"layout patch line {n} has no virtual to remove")
-        return line.replace("virtual ", "", 1)
+        return line.replace("virtual ", "", 1).replace(" override", "", 1)   # nothing to override
     if isinstance(new, tuple):
         return " ".join(original[x - 1].strip() if isinstance(x, int) else x for x in new)
     return new

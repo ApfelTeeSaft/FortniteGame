@@ -1140,6 +1140,63 @@ only where the estimate stops losing exact functions, so it is not used. Over al
 disagreements the nearer side is right in all 73 cases where it is 16 or more times closer.
 Engine manifests: 26,032 entries, 16,745 exact, 9,056 relocation-equivalent, 231 partial.
 
+### Second batch: `USceneComponent`, `FArchive`, header-name lengths (2026-11-27)
+
+**`USceneComponent`.** One slot fewer before `SetMobility`, inherited by every scene component:
+`CalcBounds` is followed by `CalcBoundingCylinder`, `ShouldCollideWhenPlacing` and
+`UpdatePhysicsVolume`, so `UpdateBounds` is not virtual. `UPrimitiveComponent`'s own virtuals
+are a constant slot earlier throughout. Its apparent ±8 pairs (`AddImpulse` and
+`AddAngularImpulse`, `SetAllPhysicsPosition` and `SetAllPhysicsRotation`) are bodies too alike
+to tell apart, not swaps. So its `UpdateBounds` override is not virtual either.
+
+**`FArchive`** (ENGINE_DIFFERENCES #19). The reference's 44 slots, identified by their bodies
+across the 50 vtables derived from it, are public 4.20's 57 with these changes:
+- 17 removed: `IsProxyOf`, `GetCacheableArchive`, `Push`/`PopSerializedProperty`, `Reset`
+  and the 12 setters;
+- `IsFilterEditorOnly` and `IsSaveGame` virtual;
+- an empty slot after `GetArchetypeFromLoader`;
+- an `IsCloseComplete`-shaped slot after `ResetCustomVersions`.
+
+The missing 8 bytes are `SerializedPropertyChain`: the reference's `FArchive::FArchive`
+(`0x011D0DA0`) stores every member ours stores except it. Modelled, the vtable has the 44 slots
+in the reference's order, and the constructor's bytes equal the reference outside relocation
+fields.
+
+**Header-name lengths.** A mirrored header's `__FILE__` is the mirror's root plus the path
+below it. The mirror now lives at a path exactly as long as the reference's
+`D:\Build\++FN25\Sync\Engine\Source` (`local-output/mirro`), so those literals have the
+reference's size and the data around them its layout. The content still differs, as it did
+for every header before.
+
+**Tried and dropped: discarded COMDATs.** Each object's layout counts every COMDAT section,
+but the linker keeps one copy of a shared COMDAT, so later objects' copies take no space in the
+image. A rule ranked objects in link order by the median address of their placed functions. It
+then dropped the sections that an earlier object also defines, and took a discarded symbol's
+neighbours from the object kept. Against the same objects, it made 60 more functions exact and
+cost 18. It dropped `__real@` float constants from `Engine.gen.13` that the reference still
+holds there, for one. The simple first-definer model is not how this image was linked, so the
+rule is not used. The light-shaft task vtable would also need identical-COMDAT folding: the
+two `UDecalComponent` delegate-instance vtables between it and its neighbours are absent in
+the reference and are defined nowhere else.
+
+**Results.** 54,299 exact (53,986 before). 316 functions became exact: 276 newly placed and 40
+that were relocation-equivalent. 3 regressed:
+- `FLargeMemoryWriter::GetArchiveName` (`0x00726920`). The reference function returns a copy
+  of the `FString` at `0xB0`; ours now reads `0xA8`. It is a folded getter in the region of
+  identical generic bodies. Its only pointer is slot 0 of a table at `0x02FA9F60`, whose other
+  slots are getters of the same shape (an `FString` at `0x68` and others), not an `FArchive`
+  vtable. None of the 17 other `FLargeMemoryData`, `FLargeMemoryReader` and
+  `FLargeMemoryWriter` functions we compile has been placed, `FLargeMemoryData::Write` and
+  `GrowBuffer` included, which do not depend on `FArchive`. So the class is most likely not
+  linked, and the old match was another class's getter. It matched ours only while our
+  `FArchive` was 8 bytes too large.
+- `FWidget3DHitTester::FWidget3DHitTester` and
+  `TGraphTask<...FDestroySkyLightCommand>::ExecuteTask`. Each has a vtable that only
+  neighbours place, and its neighbours now lie across scene-component vtables one slot shorter.
+
+The light-shaft task above is still relocation-equivalent. Engine manifests: 26,433 entries,
+17,058 exact, 9,142 relocation-equivalent, 233 partial.
+
 ## Reflection registration data (`tools/analysis/reflection.py`)
 
 UHT-generated tables in plaintext `.rdata` name functions directly. The output is
